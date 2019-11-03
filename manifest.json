@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "chext_fill_form_from_json",
+  "version": "19.1103.1332",
+  "description": "chrome extension to fill a form from json",
+  "browser_action": {
+    "default_icon": "icon32.png",
+    "default_popup": "popup.html",
+    "default_title": "fill_form_from_json"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
