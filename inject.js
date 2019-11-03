@@ -43,7 +43,19 @@ var injected = injected || (function () {
             //input is text, checkbox, radio
             Array.from(document.querySelectorAll('input')).forEach(el => {
                 if (el.name == inputName) {
-                    el.value = newText;
+                    if (el.type == "text") {
+                        el.value = newText;
+                    }
+                    else if (el.type == "radio") {
+                        setCheckedValue(el, newText);
+                    }
+                    else if (el.type == "checkbox") {
+                        if (newText == "true") {
+                            el.checked = true;
+                        } else {
+                            el.checked = false;
+                        }
+                    }
                 }
             });
             Array.from(document.querySelectorAll('textarea')).forEach(el => {
@@ -66,6 +78,25 @@ var injected = injected || (function () {
         }
     }
 
+    // set the radio button with the given value as being checked
+    // do nothing if there are no radio buttons
+    // if the given value does not exist, all the radio buttons
+    // are reset to unchecked
+    function setCheckedValue(radioObj, newValue) {
+        if (!radioObj)
+            return;
+        var radioLength = radioObj.length;
+        if (radioLength == undefined) {
+            radioObj.checked = (radioObj.value == newValue.toString());
+            return;
+        }
+        for (var i = 0; i < radioLength; i++) {
+            radioObj[i].checked = false;
+            if (radioObj[i].value == newValue.toString()) {
+                radioObj[i].checked = true;
+            }
+        }
+    }
 
     //region: boilerplate
     return true;
