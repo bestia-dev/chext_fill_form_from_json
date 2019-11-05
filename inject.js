@@ -69,7 +69,8 @@ var injected = injected || (function () {
                     var opts = el.options;
                     for (var opt, j = 0; opt = opts[j]; j++) {
                         if (opt.value == val) {
-                            sel.selectedIndex = j;
+                            alert(opt.value);
+                            el.selectedIndex = j;
                             break;
                         }
                     }
