@@ -1,19 +1,41 @@
 # chext_fill_form_from_json
 
-try this json on this form  
-<https://redux-form.com/6.5.0/examples/simple/>  
-TODO: this does not work well because it looks like it is react.
-So the data I enter are not saved in the background data.
-
+Try this json on sample form in efrro.html. .
+Just copy/paste.
 
 ```json
 {
-"firstName":"Luciano",
-"lastName":"Bestia",
-"email": "luciano@gmail.com",
-"sex":"male",  
-"favoriteColor":"Blue",
-"employed":"true",
-"notes":"some notes"
+"applicant_surname":"applicant_surname",
+"applicant_givenname":"applicant_givenname",
+"applicant_dob":"applicant_dob",
+"applicant_age":"applicant_age",
+"actualDOB":"actualDOB",
+"applicant_permcity":"applicant_permcity",
+"applicant_refpincode":"applicant_refpincode",
+"applicant_passpno":"applicant_passpno",
+"applicant_passplcofissue":"applicant_passplcofissue",
+"applicant_passpdoissue":"applicant_passpdoissue",
+"applicant_passpvalidtill":"applicant_passpvalidtill",
+"applicant_visano":"applicant_visano",
+"applicant_visaplcoissue":"applicant_visaplcoissue",
+"applicant_visadoissue":"applicant_visadoissue",
+"applicant_visavalidtill":"applicant_visavalidtill",
+"applicant_arrivedfromcity":"applicant_arrivedfromcity",
+"applicant_arrivedfromplace":"applicant_arrivedfromplace",
+"applicant_doarrivalindia":"applicant_doarrivalindia",
+"applicant_doarrivalhotel":"applicant_doarrivalhotel",
+"applicant_timeoarrivalhotel":"applicant_timeoarrivalhotel",
+"applicant_intnddurhotel":"applicant_intnddurhotel",
+"applicant_next_destination_place_IN":"applicant_next_destination_place_IN",
+"applicant_contactnoinindia":"applicant_contactnoinindia",
+"applicant_mcontactnoinindia":"applicant_mcontactnoinindia",
+"applicant_contactnoperm":"applicant_contactnoperm",
+"applicant_mcontactnoperm":"applicant_mcontactnoperm",
+"applicant_remark":"applicant_remark",
+"_comment_radio_input":"employed: Y, N  dest: I, O",
+"employed":"Y",
+"applicant_next_dest_country_flag_r":"I",
+"_comment_hidden_input":"dest: I, O",
+"applicant_next_dest_country_flag":"I"
 }
 ```
