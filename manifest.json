@@ -9,7 +9,9 @@
     "default_title": "fill_form_from_json"
   },
   "permissions": [
-    "<all_urls>",
+    "https://www.indianfrro.gov.in/*",
+	"http://127.0.0.1:8086/webfolder/*",
+	"activeTab",
     "storage"
   ],
   "icons": {
