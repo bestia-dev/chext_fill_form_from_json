@@ -28,16 +28,22 @@ var injected = injected || (function () {
     //the method to read json and fill the form
     methods.fill_form_now = function () {
         //get the json through storage
-        chrome.storage.local.get('fill_form_json',
-            function (data) {
-                var jsonObj = JSON.parse(data.fill_form_json);
-                for (var prop in jsonObj) {
-                    assignValueToInputs(prop, jsonObj[prop]);
+        try {
+            chrome.storage.local.get('fill_form_json',
+                function (data) {
+                    var jsonObj = JSON.parse(data.fill_form_json);
+                    for (var prop in jsonObj) {
+                        assignValueToInputs(prop, jsonObj[prop]);
+                    }
                 }
-            }
-        );
+            );
+        }
+        catch (err) {
+            alert(err.message);
+        }
         return true;
     }
+
     function assignValueToInputs(inputName, newText) {
         if (typeof newText === 'string') {
             //input is text, checkbox, radio
