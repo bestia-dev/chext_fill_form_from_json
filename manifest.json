@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "chext_fill_form_from_json",
-  "version": "19.1111.1543",
-  "description": "chrome extension to fill a form from json",
+  "name": "fill form from json",
+  "version": "19.1126.0823",
+  "description": "Chrome Extension to fill a form from json",
   "browser_action": {
     "default_icon": "icon32.png",
     "default_popup": "popup.html",
-    "default_title": "fill_form_from_json"
+    "default_title": "fill form from json"
   },
   "permissions": [
     "https://www.indianfrro.gov.in/*",

@@ -1,6 +1,6 @@
 # chext_fill_form_from_json
 
-*Things are changing fast. This is the situation on 2019-11-11.*
+*Things are changing fast. This is the situation on 2019-11-26.*
 Chrome extension to fill a form from json.  
 It is published on Google WebStore:  
 <https://chrome.google.com/webstore/detail/chextfillformfromjson/gdgkhgfgpfhnmiebaedlcaignonmjobe>  
@@ -45,3 +45,4 @@ In `<chrome://extensions/>` enable `Developer mode` and then use `Load unpacked`
 
 Publishing a Chrome Extension to Chrome Web Store is fairly easy.  
 It is easy to add permission for enable the use of the extension for other sites.  
+<https://chrome.google.com/webstore/developer/dashboard>  
