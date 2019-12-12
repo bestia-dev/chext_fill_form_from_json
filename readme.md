@@ -1,6 +1,6 @@
-# chext_fill_form_from_json
+# fill form from json
 
-*Things are changing fast. This is the situation on 2019-11-26.*
+*Things are changing fast. This is the situation on 2019-11-26.*  
 Chrome extension to fill a form from json.  
 It is published on Google WebStore:  
 <https://chrome.google.com/webstore/detail/chextfillformfromjson/gdgkhgfgpfhnmiebaedlcaignonmjobe>  
