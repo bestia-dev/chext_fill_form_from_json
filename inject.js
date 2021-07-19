@@ -1,5 +1,5 @@
 //region: boilerplate
-// This helps avoid conflicts in case we inject 
+// This helps avoid conflicts in case we inject
 // this script on the same page multiple times
 // without reloading.
 var injected = injected || (function () {
@@ -45,11 +45,11 @@ var injected = injected || (function () {
     }
 
     function assignValueToInputs(inputName, newText) {
-        if (typeof newText === 'string') {
+        if (typeof newText === 'string' || typeof newText === 'number') {
             //input is text, checkbox, radio
             Array.from(document.querySelectorAll('input')).forEach(el => {
                 if (el.name == inputName) {
-                    if (el.type == "text") {
+                    if (el.type == "text" || el.type == "number") {
                         el.value = newText;
                     }
                     else if (el.type == "radio") {
