@@ -1,24 +1,24 @@
 {
-  "manifest_version": 2,
-  "name": "fill form from json",
-  "version": "19.1126.0823",
-  "description": "Chrome Extension to fill a form from json",
-  "browser_action": {
-    "default_icon": "icon32.png",
-    "default_popup": "popup.html",
-    "default_title": "fill form from json"
-  },
-  "permissions": [
-    "https://www.indianfrro.gov.in/*",
-    "https://bestia.dev/efrro_form_c_json/*",
-    "activeTab",
-    "storage"
-  ],
-  "icons": {
-    "16": "icon16.png",
-    "32": "icon32.png",
-    "48": "icon48.png",
-    "128": "icon128.png",
-    "192": "icon192.png"
-  }
+    "manifest_version": 2,
+    "name": "fill form from json",
+    "version": "21.721.1147",
+    "description": "Chrome Extension to fill a form from json",
+    "browser_action": {
+        "default_icon": "icon32.png",
+        "default_popup": "popup.html",
+        "default_title": "fill form from json"
+    },
+    "permissions": [
+        "https://www.indianfrro.gov.in/*",
+        "https://bestia.dev/efrro_form_c_json/*",
+        "activeTab",
+        "storage"
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png",
+        "192": "icon192.png"
+    }
 }
