@@ -1,6 +1,6 @@
 # fill form from json
 
-*Things are changing fast. This is the situation on 2019-11-26.*  
+*Things are changing fast. This is the situation on 2021-07-21.*  
 Chrome extension to fill a form from json.  
 It is published on Google WebStore:  
 <https://chrome.google.com/webstore/detail/chextfillformfromjson/gdgkhgfgpfhnmiebaedlcaignonmjobe>  
@@ -9,6 +9,7 @@ Filling long web forms with repeated data is boring, time consuming and error pr
 It is better to save this data as json and use it multiple times to fill the forms.  
 Json is a simple text format that is a standard for web communication.  
 It is human readable and easy to edit, copy, save, send,...  
+The extension supports string and number in json. The extension supports name and ng-reflect-name in html.  
 
 ## Security
 
