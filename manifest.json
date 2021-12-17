@@ -1,16 +1,15 @@
 {
     "manifest_version": 2,
-    "name": "fill form from json",
-    "version": "21.721.1147",
-    "description": "Chrome Extension to fill a form from json",
+    "name": "Fill form from json",
+    "version": "21.1217.1328",
+    "description": "Fill a form from json",
     "browser_action": {
         "default_icon": "icon32.png",
         "default_popup": "popup.html",
-        "default_title": "fill form from json"
+        "default_title": "Fill form from json"
     },
     "permissions": [
-        "https://www.indianfrro.gov.in/*",
-        "https://bestia.dev/efrro_form_c_json/*",
+        "*://*/*",
         "activeTab",
         "storage"
     ],

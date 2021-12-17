@@ -6,24 +6,23 @@
 </head>
 
 <body>
-    <h2>Chrome extension to fill a form from json</h2>
-    <h3>Copy/paste the json text:</h3>
-    <textarea id="json" style="width:93%;height:85%" autofocus></textarea>
+    <h2>Fill a form from json</h2>
+    <h3>Paste the json text:</h3>
+    <textarea id="textarea_json" style="width:93%;height:55%" autofocus></textarea>
     <br>
-    <input type="text" id="from_fileurl" name="from_fileurl" placeholder="JSON file Url" />
-    <button id="button_from_fileurl_read">read from URL</button>
+    <button id="button_fill_form_from_json">Fill form from json</button>
+    <h3>Get json from URL:</h3>
+    <input type="text" id="input_fileurl" name="input_fileurl" style="width:93%;margin-bottom:3px" />
     <br>
-    <button id="button_send_json">fill form</button>
+    <button id="button_fill_form_from_url">Fill form from URL</button>
+    <br>
 
-    <h4>
-        This extension does not send any data over the network for security and privacy.
-        The extension can access only the active Tab.
-        The source code is published on github and anybody can inspect it to see there is no malicious or dangerous
-        code:
-    </h4>
-    <h4>
-        <a href="https://github.com/LucianoBestia/chext_fill_form_from_json"
-            target="_blank">https://github.com/LucianoBestia/chext_fill_form_from_json</a></h4>
+    <p style="width: 95%;">
+        This extension does not send any data over the network for security and privacy. The extension can access only the active Tab. The source code is published on github and anybody can inspect it to see there is no malicious or dangerous code:
+        <a href="https://github.com/LucianoBestia/chext_fill_form_from_json" target="_blank">https://github.com/LucianoBestia/chext_fill_form_from_json</a>
+        <br> ver: 21.1217.1123
+    </p>
+    <br>
     <script src="popup.js"></script>
 </body>
 

@@ -1,7 +1,7 @@
 //region: boilerplate
-let button_send_json = document.getElementById('button_send_json');
+let button_fill_form_from_json = document.getElementById('button_fill_form_from_json');
+button_fill_form_from_json.onclick = function() {
 
-button_send_json.onclick = function() {
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         fill_form_now(tabs[0]);
     });
@@ -19,9 +19,9 @@ function injectedMethod(tab, method, callback) {
 //call the injected function fill_form_now
 function fill_form_now(tab) {
     //pass json through storage
-    chrome.storage.local.set({ fill_form_json: document.getElementById("json").value },
+    chrome.storage.local.set({ fill_form_json: document.getElementById("textarea_json").value },
         function() {
-            injectedMethod(tab, 'fill_form_now', function(response) {
+            injectedMethod(tab, "fill_form_now", function(response) {
                 return true;
             })
         });
@@ -29,62 +29,28 @@ function fill_form_now(tab) {
 
 
 /* File url read */
-
-function getJSON(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status === 200) {
-        callback(null, xhr.response);
-      } else {
-        callback(status, xhr.response);
-      }
-    };
-    xhr.send();
-};
-
-fileurl_read();
-
-let button_from_fileurl_read = document.getElementById('button_from_fileurl_read');
-button_from_fileurl_read.onclick = function() {
-    fileurl_read(true);
+var input_fileurl_value = document.getElementById('input_fileurl');
+let button_fill_form_from_url = document.getElementById('button_fill_form_from_url');
+button_fill_form_from_url.onclick = function() {
+    fileurl_read();
 }
 
-function isValidHttpUrl(string) {
-    let url;
-    
-    try {
-      url = new URL(string);
-    } catch (_) {
-      return false;  
-    }
-  
-    return url.protocol === "http:" || url.protocol === "https:";
-  }
+// read from storage the last url and fill the input:
+var localstorage_key_data_name = 'chext_fill_form_from_json_from_fileurl';
+var storage_fileurl = localStorage.getItem(localstorage_key_data_name);
+if (storage_fileurl) {
+    input_fileurl_value.value = storage_fileurl;
+}
 
-function fileurl_read(getJson) {
-    var from_fileurl_input = document.getElementById('from_fileurl');
-    var localstorage_key_data_name = 'chext_fill_form_from_json_from_fileurl'; // contains the key name
-    var fileUrl = getJson ? from_fileurl_input.value : 'https://';
+function fileurl_read() {
+    // save the url for the next time
+    var storage_fileurl = input_fileurl_value.value
+    localStorage.setItem(localstorage_key_data_name, storage_fileurl);
 
-    // Get url setted in localStorage
-    var from_fileurl = localStorage.getItem(localstorage_key_data_name);
-
-    if (!from_fileurl || getJson) {
-        // Set default url where read json data
-        localStorage.setItem(localstorage_key_data_name, fileUrl);
-        from_fileurl = fileUrl;
-    }
-
-    // Set url in the input
-    from_fileurl_input.value = from_fileurl;// Set in input key name
-
-    if (from_fileurl && isValidHttpUrl(from_fileurl)) {
-        getJSON(from_fileurl,
+    if (storage_fileurl && isValidHttpUrl(storage_fileurl)) {
+        getJSON(storage_fileurl,
             function(err, data) {
-                document.getElementById('json').value = err ? JSON.stringify(err) : JSON.stringify(data);
+                document.getElementById('textarea_json').value = err ? JSON.stringify(err) : JSON.stringify(data, null, 2);
 
                 if (!err && data) {
                     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
@@ -93,7 +59,34 @@ function fileurl_read(getJson) {
                 }
             }
         );
-    } else if (from_fileurl && getJson) {
+    } else if (storage_fileurl) {
         alert('Invalid URL');
     }
+}
+
+function getJSON(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+        var status = xhr.status;
+        if (status === 200) {
+            callback(null, xhr.response);
+        } else {
+            callback(status, xhr.response);
+        }
+    };
+    xhr.send();
+};
+
+function isValidHttpUrl(string) {
+    let url;
+
+    try {
+        url = new URL(string);
+    } catch (_) {
+        return false;
+    }
+
+    return url.protocol === "http:" || url.protocol === "https:";
 }
