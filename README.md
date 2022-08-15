@@ -3,7 +3,7 @@
 **Chrome extension to fill a form from json**  
 ***version: 1.0  date: 2021-12-17 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/bestia-dev/chext_fill_form_from_json)***  
 
-![Hits](https://bestia.dev/webpage_hit_counter/get_svg_image/504794898)
+![Hits](https://bestia.dev/webpage_hit_counter/get_svg_image/504794898.svg)
 
 Hashtags: #javascript #chromeextension
 
