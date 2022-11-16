@@ -51,11 +51,10 @@ Done.
 
 ## json from local file
 
-Chrome extensions cannot by default access the local file system because of security.
-You can run a local web server on your machine only for one folder
-and then you can access it in the browser as http://localhost/.
-The local web server is NOT accessible from the internet. Your files can be read only from your local machine.
-There are many small and simple local web servers for example: https://github.com/TheWaWaR/simple-http-server/releases
+Chrome extensions cannot by default access the local file system because of security.  
+You can run a local web server on your machine only for one folder and then you can access it in the browser as http://localhost/.  
+The local web server is NOT accessible from the internet. Your files can be read only from your local machine.  
+There are many small and simple local web servers for example: https://github.com/TheWaWaR/simple-http-server/releases  
 
 ## Development
 
