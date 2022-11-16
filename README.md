@@ -48,7 +48,15 @@ start the extension and enter this URL:
 <https://bestia.dev/chext_fill_form_from_json/form_example.json>  
 Click on `Fill form from URL`.  
 Done.
-  
+
+## json from local file
+
+Chrome extensions cannot by default access the local file system because of security.
+You can run a local web server on your machine only for one folder
+and then you can access it in the browser as http://localhost/.
+The local web server is NOT accessible from the internet. Your files can be read only from your local machine.
+There are many small and simple local web servers for example: https://github.com/TheWaWaR/simple-http-server/releases
+
 ## Development
 
 For development you can install it from the local disk.  
