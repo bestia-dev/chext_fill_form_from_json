@@ -7,6 +7,8 @@
 
  ![maintained](https://img.shields.io/badge/maintained-green)
  ![ready_for_use](https://img.shields.io/badge/ready_for_use-green)
+ ![chromeextension](https://img.shields.io/badge/chromeextension-yellow)
+ ![javascript ](https://img.shields.io/badge/javascript-yellow)
  ![chext_fill_form_from_json](https://bestia.dev/webpage_hit_counter/get_svg_image/504794898.svg)
 
 Hashtags: #javascript #chromeextension
